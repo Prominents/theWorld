@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax Website</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", "sans-serif";
+      }
+      body {
+        background: #fff;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      header {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        padding: 30px 45px;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 100;
+      }
+      .logo {
+        color: #aac6ff;
+        font-size: 2em;
+        pointer-events: none;
+        margin-right: 200px;
+      }
+      .navigation a {
+        text-decoration: none;
+        color: #aac6ff;
+        padding: 6px 15px;
+        border-radius: 20px;
+        margin: 0 10px;
+        font-weight: 600;
+      }
+      .navigation a:hover,
+      .navigation a.active {
+        background-color: #306082;
+        color: #fff;
+      }
+      .parallax {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        
+      }
+      .parallax img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        pointer-events: none;
+      }
+      .paragraph {
+        position: relative;
+        padding: 100px;
+        color: #fff;
+        background-color: #003329;
+      }
+      .paragraph h2 {
+        font-size: 3em;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+      .paragraph p {
+        font-size: 1em;
+        font-weight: 300;
+        color: #fff;
+      }
+      #text {
+        position: absolute;
+        font-size: 5em;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="logo/logo.png" alt="Logo" class="logo" />
+      <nav class="navigation">
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Service</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <section class="parallax">
+      <img src="parallax1/hill1.png" id="hill1" />
+      <img src="parallax1/hill2.png" id="hill2" />
+      <img src="parallax1/hill3.png" id="hill3" />
+      <img src="parallax1/hill4.png" id="hill4" />
+      <img src="parallax1/hill5.png" id="hill5" />
+      <img src="parallax1/tree.png" id="tree" />
+      <h2 id="text">Parallax Website</h2>
+      <img src="parallax1/leaf.png" id="leaf" />
+      <img src="parallax1/plant.png" id="plant" />
+    </section>
+    <section class="paragraph">
+      <h2>Parallax Scrolling Paragraph</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quasi
+        ipsa beatae, maxime nesciunt maiores deleniti magnam perferendis nostrum
+        quis, ipsam praesentium accusamus inventore optio, ipsum aperiam
+        voluptate debitis blanditiis provident minus. Dolorem, cupiditate
+        voluptatem? Corrupti, sit dolorem voluptatum iste, vitae quaerat at
+        recusandae hic velit doloremque minus architecto nihil illum ex
+        quisquam. Quo eius expedita sequi suscipit quaerat maiores, aut
+        molestiae magnam quisquam repudiandae exercitationem tempora deserunt
+        quam nihil consectetur blanditiis perferendis! Officiis voluptatem quas
+        animi magnam, corrupti voluptas impedit iure maiores nesciunt earum
+        molestiae exercitationem reiciendis asperiores quo delectus pariatur
+        doloremque debitis error ipsam aut optio est! Minus doloribus
+        exercitationem sapiente enim rem alias ad aliquam corporis quis sequi
+        perspiciatis unde iusto ea soluta voluptatem eos ex quasi eum quas sunt,
+        numquam error libero delectus nulla. Fugit, eum.
+      </p>
+      <br />
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quasi
+        ipsa beatae, maxime nesciunt maiores deleniti magnam perferendis nostrum
+        quis, ipsam praesentium accusamus inventore optio, ipsum aperiam
+        voluptate debitis blanditiis provident minus. Dolorem, cupiditate
+        voluptatem? Corrupti, sit dolorem voluptatum iste, vitae quaerat at
+        recusandae hic velit doloremque minus architecto nihil illum ex
+        quisquam. Quo eius expedita sequi suscipit quaerat maiores, aut
+        molestiae magnam quisquam repudiandae exercitationem tempora deserunt
+        quam nihil consectetur blanditiis perferendis! Officiis voluptatem quas
+        animi magnam, corrupti voluptas impedit iure maiores nesciunt earum
+        molestiae exercitationem reiciendis asperiores quo delectus pariatur
+        doloremque debitis error ipsam aut optio est! Minus doloribus
+        exercitationem sapiente enim rem alias ad aliquam corporis quis sequi
+        perspiciatis unde iusto ea soluta voluptatem eos ex quasi eum quas sunt,
+        numquam error libero delectus nulla. Fugit, eum.
+      </p>
+      <br />
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quasi
+        ipsa beatae, maxime nesciunt maiores deleniti magnam perferendis nostrum
+        quis, ipsam praesentium accusamus inventore optio, ipsum aperiam
+        voluptate debitis blanditiis provident minus. Dolorem, cupiditate
+        voluptatem? Corrupti, sit dolorem voluptatum iste, vitae quaerat at
+        recusandae hic velit doloremque minus architecto nihil illum ex
+        quisquam. Quo eius expedita sequi suscipit quaerat maiores, aut
+        molestiae magnam quisquam repudiandae exercitationem tempora deserunt
+        quam nihil consectetur blanditiis perferendis! Officiis voluptatem quas
+        animi magnam, corrupti voluptas impedit iure maiores nesciunt earum
+        molestiae exercitationem reiciendis asperiores quo delectus pariatur
+        doloremque debitis error ipsam aut optio est! Minus doloribus
+        exercitationem sapiente enim rem alias ad aliquam corporis quis sequi
+        perspiciatis unde iusto ea soluta voluptatem eos ex quasi eum quas sunt,
+        numquam error libero delectus nulla. Fugit, eum.
+      </p>
+    </section>
+    <script>
+      let text = document.getElementById("text");
+      let leaf = document.getElementById("leaf");
+      let hill1 = document.getElementById("hill1");
+      let hill4 = document.getElementById("hill4");
+      let hill5 = document.getElementById("hill5");
+
+      window.addEventListener("scroll", () => {
+        let value = window.scrollY;
+
+        text.style.marginTop = value * 2.5 + "px";
+        leaf.style.top = value * -1.5 + "px";
+        leaf.style.left = value * 1.5 + "px";
+        hill1.style.top = value * 1 + "px";
+        hill4.style.left = value * -1.5 + "px";
+        hill5.style.left = value * 1.5 + "px";
+      });
+    </script>
+  </body>
+</html>
