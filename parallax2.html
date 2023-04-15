@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax BG</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    section {
+      padding: 100px;
+    }
+    section h2 {
+      font-size: 3em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    section p {
+      line-height: 1.8em;
+    }
+    .parallaxBg {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .parallaxBg h2 {
+      position: absolute;
+      font-size: 3em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 800;
+      background: floralwhite;
+      padding: 0 20px;
+    }
+  </style>
+  <body>
+    <section>
+      <h2>Left Parallax</h2>
+      <p>Description</p>
+    </section>
+    <div class="parallaxBg">
+      <img src="parallax/parallax2/1.png" class="parallax1" />
+      <h2>Left</h2>
+    </div>
+    <section>
+      <h2>Right Parallax</h2>
+      <p>Description</p>
+    </section>
+    <div class="parallaxBg">
+      <img src="parallax/parallax2/2.png" class="parallax2" />
+      <h2>Right</h2>
+    </div>
+    <section>
+      <h2>Up Parallax</h2>
+      <p>Description</p>
+    </section>
+    <div class="parallaxBg">
+      <img src="parallax/parallax2/3.png" class="parallax3" />
+      <h2>Up</h2>
+    </div>
+    <section>
+      <h2>Down Parallax</h2>
+      <p>Description</p>
+    </section>
+    <div class="parallaxBg">
+      <img src="parallax/parallax2/4.png" class="parallax4" />
+      <h2>Down</h2>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script>
+      var image1 = document.getElementsByClassName("parallax1");
+      var image2 = document.getElementsByClassName("parallax2");
+      var image3 = document.getElementsByClassName("parallax3");
+      var image4 = document.getElementsByClassName("parallax4");
+
+      new simpleParallax(image1, {
+        orientation: "left",
+      });
+
+      new simpleParallax(image2, {
+        orientation: "right",
+      });
+
+      new simpleParallax(image3, {
+        orientation: "up",
+      });
+
+      new simpleParallax(image4, {
+        orientation: "down",
+      });
+    </script>
+  </body>
+</html>
