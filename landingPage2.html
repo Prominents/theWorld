@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <title>Orange Landing Page</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      padding: 100px 100px 0;
+      background: linear-gradient(to bottom, #ffaa6e, #ff5354);
+      overflow: hidden;
+    }
+    section:before {
+      content: "Orange";
+      position: absolute;
+      font-size: 20vw;
+      color: rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      margin-top: 20vh;
+    }
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 40px 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .logo img {
+      max-width: 150px;
+    }
+    .toggle {
+      width: 30px;
+      height: 30px;
+      background: url(landingPage/landingPage2/menu.png);
+      background-size: 30px;
+      cursor: pointer;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .content {
+      position: relative;
+      width: 100%;
+      margin-top: 40px;
+    }
+    .content .imgBx {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .content .imgBx img {
+      max-width: 100%;
+    }
+    .content .text {
+      max-width: 700px;
+      margin-top: 20px;
+    }
+    .content .text h2 {
+      color: #fff;
+      font-size: 2.5em;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .content .text p {
+      color: #fff;
+    }
+    .content .text a {
+      display: inline-block;
+      padding: 10px 30px;
+      color: #111;
+      background: #fff;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: 2px;
+      margin-top: 15px;
+    }
+    .sci {
+      position: absolute;
+      bottom: -3px;
+      right: -70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      filter: invert(1);
+    }
+    .sci li {
+      list-style: none;
+      margin-right: 15px;
+    }
+    .sci li a {
+      display: block;
+      transform: scale(0.7);
+    }
+    @media (max-width: 767px) {
+      header {
+        padding: 20px 40px;
+      }
+      section {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        padding: 40px;
+        overflow-x: hidden;
+        background: linear-gradient(to bottom, #d509a0, #ff606e);
+      }
+      .sci {
+        position: absolute;
+        bottom: 45px;
+        right: initial;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        filter: invert(1);
+        margin-top: 80px;
+      }
+      .sci li {
+        margin-right: 15px;
+      }
+    }
+
+    .loader {
+      background: url(landingPage/landingPage2/sunny-light.svg) no-repeat center;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      z-index: 1001;
+    }
+
+    .loader-section {
+      position: fixed;
+      top: 0;
+      width: 51%;
+      height: 100%;
+      background: #222;
+      z-index: 1000;
+    }
+    .section-left {
+      left: 0;
+      background-color: #f7d060;
+    }
+    .section-right {
+      right: 0;
+      background-color: #f7d060;
+    }
+
+    /*Finished Loading Styles*/
+    .loaded .section-left {
+      transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transform: translateX(-100%);
+    }
+    .loaded .section-right {
+      transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transform: translateX(100%);
+    }
+    .loaded .loader {
+      transition: all 0.3s ease-out;
+      opacity: 0;
+    }
+  </style>
+  <body>
+    <div class="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+    <section>
+      <header>
+        <a href="#" class="logo"><img src="Logo/logo.png" /></a>
+        <div class="toggle"></div>
+      </header>
+      <div class="content">
+        <div class="imgBx">
+          <img src="landingPage/landingPage2/orange.png" />
+        </div>
+        <ul class="sci">
+          <li>
+            <a href="#"><img src="Logo/fb.png" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="Logo/tweet.png" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="Logo/ig.png" /></a>
+          </li>
+        </ul>
+        <div class="text">
+          <h2>Orange Landing Page</h2>
+          <p>
+            An orange is a fruit of various citrus species in the family
+            Rutaceae; it primarily refers to Citrus × sinensis, which is also
+            called sweet orange, to distinguish it from the related Citrus ×
+            aurantium, referred to as bitter orange.
+          </p>
+          <a href="#"
+            ><details>
+              <b>
+                Bergamot orange (Citrus bergamia Risso)<br />Bitter orange
+                (Citrus aurantium)<br />Mandarin orange (Citrus reticulata)<br />Trifoliate
+                orange (Poncirus trifoliata)</b
+              >
+            </details></a
+          >
+        </div>
+      </div>
+    </section>
+    <script>
+      setTimeout(function () {
+        document.body.classList.add("loaded");
+      }, 2000);
+
+      //let loader = document.getElementById("preloader");
+
+      // window.addEventListener("load", () => {
+      //   loader.style.display = "none";
+      // });
+    </script>
+  </body>
+</html>
