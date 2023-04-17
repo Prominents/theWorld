@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <title>Orange Landing Page</title>
   </head>
   <style>
@@ -16,7 +22,7 @@
       position: relative;
       width: 100%;
       min-height: 100vh;
-      padding: 100px 100px 0;
+      padding: 55px 70px 0;
       background: linear-gradient(to bottom, #ffaa6e, #ff5354);
       overflow: hidden;
     }
@@ -43,15 +49,6 @@
     }
     .logo img {
       max-width: 150px;
-    }
-    .toggle {
-      width: 30px;
-      height: 30px;
-      background: url(landingPage/landingPage2/menu.png);
-      background-size: 30px;
-      cursor: pointer;
-      background-position: center;
-      background-repeat: no-repeat;
     }
     .content {
       position: relative;
@@ -109,34 +106,66 @@
       display: block;
       transform: scale(0.7);
     }
-    @media (max-width: 767px) {
-      header {
-        padding: 20px 40px;
-      }
-      section {
-        position: relative;
-        width: 100%;
-        min-height: 100vh;
-        padding: 40px;
-        overflow-x: hidden;
-        background: linear-gradient(to bottom, #d509a0, #ff606e);
-      }
-      .sci {
-        position: absolute;
-        bottom: 45px;
-        right: initial;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: row;
-        filter: invert(1);
-        margin-top: 80px;
-      }
-      .sci li {
-        margin-right: 15px;
-      }
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+    }
+    a:hover {
+      color: #ff6e6e;
+    }
+    /* Header */
+    header {
+      position: relative;
+      padding: 0 0.2rem;
+    }
+    .menu {
+      width: 100%;
+      height: 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .navigation {
+      display: flex;
+      gap: 2rem;
     }
 
+    .btn-start {
+      border-radius: 20px;
+      background-color: #f7bb60;
+      padding: 0.5rem 1rem;
+      border: none;
+      outline: none;
+      font-size: 0.8rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      transition: scale 0.2 ease;
+    }
+    .btn-start:hover {
+      scale: 1.05;
+    }
+    .btn-start:active {
+      scale: 0.95;
+    }
+    .toggle {
+      color: #fff;
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: none;
+    }
+    .dropdown-nav {
+      display: none;
+    }
+
+    /* Loading Onload */
     .loader {
       background: url(landingPage/landingPage2/sunny-light.svg) no-repeat center;
       height: 100vh;
@@ -175,6 +204,78 @@
       transition: all 0.3s ease-out;
       opacity: 0;
     }
+
+    /* Website max-width < 850 */
+    @media (max-width: 850px) {
+      header {
+        padding: 20px 40px;
+      }
+      section {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        padding: 15px;
+        overflow-x: hidden;
+        background: linear-gradient(to bottom, #d509a0, #ff606e);
+      }
+      .sci {
+        position: relative;
+        right: initial;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        filter: invert(1);
+        margin-top: -11px;
+      }
+      .sci li {
+        margin-right: 15px;
+      }
+      .menu .navigation,
+      .menu .btn-start {
+        display: none;
+      }
+      .toggle {
+        display: block;
+      }
+      .dropdown-nav {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+        width: 300px;
+        height: 0;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(11px);
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 1;
+        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .dropdown-nav.open {
+        height: 260px;
+      }
+      .dropdown-nav li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .dropdown-nav a {
+        text-decoration: none;
+        color: #fff;
+        padding: 6px 15px;
+        border-radius: 20px;
+        margin: 0 10px;
+        font-weight: 600;
+      }
+      .dropdown-nav .btn-start {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    @media (max-width: 576px) {.dropdown-nav{left: 2rem;width: unset;}}
   </style>
   <body>
     <div class="loader"></div>
@@ -182,8 +283,26 @@
     <div class="loader-section section-right"></div>
     <section>
       <header>
-        <a href="#" class="logo"><img src="Logo/logo.png" /></a>
-        <div class="toggle"></div>
+        <div class="menu">
+          <a href="#" class="logo"><img src="Logo/logo.png" /></a>
+          <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <a href="#" class="btn-start">Try This!</a>
+          <div class="toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="dropdown-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#" class="btn-start">Try This!</a></li>
+        </div>
       </header>
       <div class="content">
         <div class="imgBx">
@@ -221,9 +340,25 @@
       </div>
     </section>
     <script>
+      //Fake loading wait
       setTimeout(() => {
         document.body.classList.add("loaded");
-      }, 2000);
+        document.querySelector(".loader").style.display = "none"; //HIDE THE ELEMENT
+        document.querySelector(".loader").style.remove(); // COMPLETELY REMOVE IT
+      }, 1000);
+
+      const toggleBtn = document.querySelector(".toggle");
+      const toggleBtnIcon = document.querySelector(".toggle i");
+      const dropDownMenu = document.querySelector(".dropdown-nav");
+
+      toggleBtnIcon.onclick = () => {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
 
       //let loader = document.getElementById("preloader");
 
