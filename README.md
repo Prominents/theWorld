@@ -1,7 +1,7 @@
-## The Collection
+## The Collection :books:
 This is a collection of related web pages items and can be accessed for everywhere and anywhere. 
 
-## The Website
+## The Website :art:
 Websites can be used for a variety of purposes, such as sharing information, selling products or services, providing entertainment, or facilitating communication.
 
 A typical website consists of several components, including:
@@ -26,7 +26,7 @@ Websites can be static or dynamic. A static website is a collection of web pages
 
 Overall, a website is a powerful tool that can be used for a wide range of purposes, from promoting a business to sharing personal interests or hobbies.
 
-## Power of Website
+## Power of Website :earth_asia:
 While a website can be a powerful tool for businesses, organizations, and individuals to promote their ideas, products, or services, it does not necessarily have the power to rule the world.
 
 A website can certainly reach a wide audience and influence people's opinions and behaviors, but it is not the only factor that determines world events. There are many other factors at play, such as political, economic, social, and cultural factors, that shape the world we live in.
