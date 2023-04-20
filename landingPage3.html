@@ -26,7 +26,8 @@
       box-sizing: border-box;
       overflow: hidden;
     }
-    html,body {
+    html,
+    body {
       width: 100%;
       height: 100vh;
       background: #eae8dc;
@@ -63,9 +64,10 @@
       height: 300px;
       margin: 40px;
       cursor: pointer;
+      filter: contrast(90%);
     }
     .image .img:hover {
-      filter: grayscale(1);
+      filter: contrast(110%);
     }
     .img-1 {
       transform: scale(1.1);
@@ -92,11 +94,48 @@
       background: url(landingPage/landingPage3/5.png) 50% 50% no-repeat;
       background-size: cover;
     }
-    .title span{position: absolute;font-size: 150px;text-transform: uppercase;color: #fff;top: 40%;font-weight: bolder;left: 170px;letter-spacing: 50px;z-index: 2;}
-    .side-icon{display: flex;position: absolute;top: 45%;justify-content: space-between;width: 100%;padding: 40px;font-size: 40px;}
-    .bottom-bar{position: absolute;bottom: 40px;width: 100%;margin: 20px auto;display: flex;justify-content: space-around;color: black;text-transform: uppercase;letter-spacing: 4px;}
-    .social ul{list-style: none;position: fixed;right: 41px;top: 65%;padding: 10px 10px;}
-    .social ul li{font-size: 18px;margin: 24px;}
+    .title span {
+      position: absolute;
+      font-size: 150px;
+      text-transform: uppercase;
+      color: #fff;
+      top: 40%;
+      font-weight: bolder;
+      left: 170px;
+      letter-spacing: 50px;
+      z-index: 2;
+    }
+    .side-icon {
+      display: flex;
+      position: absolute;
+      top: 45%;
+      justify-content: space-between;
+      width: 100%;
+      padding: 40px;
+      font-size: 40px;
+    }
+    .bottom-bar {
+      position: absolute;
+      bottom: 40px;
+      width: 100%;
+      margin: 20px auto;
+      display: flex;
+      justify-content: space-around;
+      color: black;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+    .social ul {
+      list-style: none;
+      position: fixed;
+      right: 41px;
+      top: 65%;
+      padding: 10px 10px;
+    }
+    .social ul li {
+      font-size: 18px;
+      margin: 24px;
+    }
   </style>
   <body>
     <div class="container">
@@ -140,5 +179,50 @@
         </ul>
       </div>
     </div>
+
+    <script>
+      TweenMax.staggerFrom(".logo", 1.6, {
+        delay: 0.2,
+        opacity: 0,
+        y: 20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.staggerFrom(".search", 1.6, {
+        delay: 0.2,
+        opacity: 0,
+        y: 20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.staggerFrom(".img", 2.5, {
+        delay: 0.7,
+        opacity: 0,
+        y: 70,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.staggerFrom(".bottom-bar", 2, {
+        delay: 1.5,
+        opacity: 0,
+        y: -40,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.staggerFrom(".side-icon", 2, {
+        delay: 2,
+        opacity: 0,
+        y: 40,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.staggerFrom(".title span", 3, {
+        delay: 3,
+        opacity: 0,
+        y: -100,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.staggerFrom(".social ul li", 3, {
+        delay: 4,
+        opacity: 0,
+        y: 80,
+        ease: Expo.easeInOut,
+      });
+    </script>
   </body>
 </html>
