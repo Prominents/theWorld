@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Observer</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap");
+    body {
+      background-color: #131316;
+      color: white;
+      font-family: "Poppins", sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+    section {
+      display: grid;
+      place-items: center;
+      align-content: center;
+      min-height: 100vh;
+    }
+    .hidden {
+      opacity: 0;
+      filter: blur(5px);
+      transform: translateX(-100%);
+      transition: all 1s;
+    }
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+    }
+    .logos {
+      display: flex;
+    }
+    .logo:nth-child(2) {
+      transition-delay: 200ms;
+    }
+    .logo:nth-child(3) {
+      transition-delay: 400ms;
+    }
+    .logo:nth-child(4) {
+      transition-delay: 600ms;
+    }
+    .logo:nth-child(5) {
+      transition-delay: 800ms;
+    }
+    @media (prefers-reduced-motion) {
+      .hidden {
+        transition: none;
+      }
+    }
+  </style>
+  <body>
+    <section class="hidden">
+      <h1>Hi mom</h1>
+      <p>This is My Website</p>
+    </section>
+
+    <section class="hidden">
+      <h2>Buy My Product</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem.</p>
+    </section>
+
+    <section class="hidden">
+      <h2>It's Really Good!</h2>
+      <div class="logos">
+        <div class="logo hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            shape-rendering="auto"
+            width="51px"
+            height="51px">
+            <desc>
+              "Bootstrap Icons" by "The Bootstrap Authors", licensed under
+              "MIT". / Remix of the original. - Created with dicebear.com
+            </desc>
+            <metadata
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:cc="http://creativecommons.org/ns#"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:RDF
+                ><cc:Work
+                  ><dc:title>Bootstrap Icons</dc:title
+                  ><dc:creator
+                    ><cc:Agent rdf:about="https://getbootstrap.com/"
+                      ><dc:title>The Bootstrap Authors</dc:title></cc:Agent
+                    ></dc:creator
+                  ><dc:source>https://github.com/twbs/icons</dc:source
+                  ><cc:license
+                    rdf:resource="https://github.com/twbs/icons/blob/main/LICENSE.md" /></cc:Work
+              ></rdf:RDF>
+            </metadata>
+            <mask id="viewboxMask">
+              <rect
+                width="24"
+                height="24"
+                rx="0"
+                ry="0"
+                x="0"
+                y="0"
+                fill="#fff" />
+            </mask>
+            <g mask="url(#viewboxMask)">
+              <rect fill="#ffe082" width="24" height="24" x="0" y="0" />
+              <g transform="translate(4 4)">
+                <g fill="#fff">
+                  <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z" />
+                  <path
+                    d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5ZM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3Zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5Zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1Z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="logo hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            shape-rendering="auto"
+            width="51px"
+            height="51px">
+            <desc>
+              "Bootstrap Icons" by "The Bootstrap Authors", licensed under
+              "MIT". / Remix of the original. - Created with dicebear.com
+            </desc>
+            <metadata
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:cc="http://creativecommons.org/ns#"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:RDF
+                ><cc:Work
+                  ><dc:title>Bootstrap Icons</dc:title
+                  ><dc:creator
+                    ><cc:Agent rdf:about="https://getbootstrap.com/"
+                      ><dc:title>The Bootstrap Authors</dc:title></cc:Agent
+                    ></dc:creator
+                  ><dc:source>https://github.com/twbs/icons</dc:source
+                  ><cc:license
+                    rdf:resource="https://github.com/twbs/icons/blob/main/LICENSE.md" /></cc:Work
+              ></rdf:RDF>
+            </metadata>
+            <mask id="viewboxMask">
+              <rect
+                width="24"
+                height="24"
+                rx="0"
+                ry="0"
+                x="0"
+                y="0"
+                fill="#fff" />
+            </mask>
+            <g mask="url(#viewboxMask)">
+              <rect fill="#a5d6a7" width="24" height="24" x="0" y="0" />
+              <g transform="translate(4 4)">
+                <g fill="#fff">
+                  <path
+                    d="M0 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H9.269c.144.162.33.324.531.475.287.214.59.404.907.57l.014.006.003.002A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.224-.947l.003-.002.014-.007a6.744 6.744 0 0 0 .907-.569c.2-.15.387-.313.531-.475H2a2 2 0 0 1-2-2V6Zm2-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H2Z" />
+                  <path
+                    d="M8 6.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm7 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="logo hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            shape-rendering="auto"
+            width="51px"
+            height="51px">
+            <desc>
+              "Bootstrap Icons" by "The Bootstrap Authors", licensed under
+              "MIT". / Remix of the original. - Created with dicebear.com
+            </desc>
+            <metadata
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:cc="http://creativecommons.org/ns#"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:RDF
+                ><cc:Work
+                  ><dc:title>Bootstrap Icons</dc:title
+                  ><dc:creator
+                    ><cc:Agent rdf:about="https://getbootstrap.com/"
+                      ><dc:title>The Bootstrap Authors</dc:title></cc:Agent
+                    ></dc:creator
+                  ><dc:source>https://github.com/twbs/icons</dc:source
+                  ><cc:license
+                    rdf:resource="https://github.com/twbs/icons/blob/main/LICENSE.md" /></cc:Work
+              ></rdf:RDF>
+            </metadata>
+            <mask id="viewboxMask">
+              <rect
+                width="24"
+                height="24"
+                rx="0"
+                ry="0"
+                x="0"
+                y="0"
+                fill="#fff" />
+            </mask>
+            <g mask="url(#viewboxMask)">
+              <rect fill="#ffe082" width="24" height="24" x="0" y="0" />
+              <g transform="translate(4 4)">
+                <g fill="#fff">
+                  <path
+                    d="M14 5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12ZM2 4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2Z" />
+                  <path
+                    d="M13 10.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Zm0-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Zm-5 0A.25.25 0 0 1 8.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 8 8.75v-.5Zm2 0a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-.5Zm1 2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Zm-5-2A.25.25 0 0 1 6.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 6 8.75v-.5Zm-2 0A.25.25 0 0 1 4.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 4 8.75v-.5Zm-2 0A.25.25 0 0 1 2.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 2 8.75v-.5Zm11-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Zm-2 0a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Zm-2 0A.25.25 0 0 1 9.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 9 6.75v-.5Zm-2 0A.25.25 0 0 1 7.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 7 6.75v-.5Zm-2 0A.25.25 0 0 1 5.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 5 6.75v-.5Zm-3 0A.25.25 0 0 1 2.25 6h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5A.25.25 0 0 1 2 6.75v-.5Zm0 4a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Zm2 0a.25.25 0 0 1 .25-.25h5.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-5.5a.25.25 0 0 1-.25-.25v-.5Z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="logo hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            shape-rendering="auto"
+            width="51px"
+            height="51px">
+            <desc>
+              "Bootstrap Icons" by "The Bootstrap Authors", licensed under
+              "MIT". / Remix of the original. - Created with dicebear.com
+            </desc>
+            <metadata
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:cc="http://creativecommons.org/ns#"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:RDF
+                ><cc:Work
+                  ><dc:title>Bootstrap Icons</dc:title
+                  ><dc:creator
+                    ><cc:Agent rdf:about="https://getbootstrap.com/"
+                      ><dc:title>The Bootstrap Authors</dc:title></cc:Agent
+                    ></dc:creator
+                  ><dc:source>https://github.com/twbs/icons</dc:source
+                  ><cc:license
+                    rdf:resource="https://github.com/twbs/icons/blob/main/LICENSE.md" /></cc:Work
+              ></rdf:RDF>
+            </metadata>
+            <mask id="viewboxMask">
+              <rect
+                width="24"
+                height="24"
+                rx="0"
+                ry="0"
+                x="0"
+                y="0"
+                fill="#fff" />
+            </mask>
+            <g mask="url(#viewboxMask)">
+              <rect fill="#9fa8da" width="24" height="24" x="0" y="0" />
+              <g transform="translate(4 4)">
+                <path
+                  d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 1 1-1 0v-2A.5.5 0 0 1 8 3Zm4 8a4 4 0 1 1-8 0V5a4 4 0 0 1 8 0v6ZM8 0a5 5 0 0 0-5 5v6a5 5 0 1 0 10 0V5a5 5 0 0 0-5-5Z"
+                  fill="#fff" />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="logo hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            shape-rendering="auto"
+            width="51px"
+            height="51px">
+            <desc>
+              "Bootstrap Icons" by "The Bootstrap Authors", licensed under
+              "MIT". / Remix of the original. - Created with dicebear.com
+            </desc>
+            <metadata
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:cc="http://creativecommons.org/ns#"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:RDF
+                ><cc:Work
+                  ><dc:title>Bootstrap Icons</dc:title
+                  ><dc:creator
+                    ><cc:Agent rdf:about="https://getbootstrap.com/"
+                      ><dc:title>The Bootstrap Authors</dc:title></cc:Agent
+                    ></dc:creator
+                  ><dc:source>https://github.com/twbs/icons</dc:source
+                  ><cc:license
+                    rdf:resource="https://github.com/twbs/icons/blob/main/LICENSE.md" /></cc:Work
+              ></rdf:RDF>
+            </metadata>
+            <mask id="viewboxMask">
+              <rect
+                width="24"
+                height="24"
+                rx="0"
+                ry="0"
+                x="0"
+                y="0"
+                fill="#fff" />
+            </mask>
+            <g mask="url(#viewboxMask)">
+              <rect fill="#80deea" width="24" height="24" x="0" y="0" />
+              <g transform="translate(4 4)">
+                <g fill="#fff">
+                  <path
+                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14Zm0 1A8 8 0 1 0 8-.001 8 8 0 0 0 8 16Z" />
+                  <path
+                    d="M10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM8 4a4 4 0 0 0-4 4 .5.5 0 1 1-1 0 5 5 0 0 1 5-5 .5.5 0 1 1 0 1Zm4.5 3.5a.5.5 0 0 1 .5.5 5 5 0 0 1-5 5 .5.5 0 0 1 0-1 4 4 0 0 0 4-4 .5.5 0 0 1 .5-.5Z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="hidden"><h1>Thank You!</h1></section>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          console.log(entry);
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      });
+
+      const hiddenElements = document.querySelectorAll(".hidden");
+      hiddenElements.forEach((element) => observer.observe(element));
+    </script>
+  </body>
+</html>
