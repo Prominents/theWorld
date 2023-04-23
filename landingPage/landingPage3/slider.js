@@ -1,6 +1,6 @@
 // Designed by: Leonhardt
 
-
+// Object Items
 const items = [
   {
     img: "1.png",
@@ -62,6 +62,7 @@ class Slider {
       });
   }
 
+  // Item Property
   renderItem() {
     const { img, job, naming, desc } = this.items[this.active];
 
@@ -86,6 +87,7 @@ class Slider {
     document.querySelector(".slider__index").innerHTML = sliderIndex;
   }
 
+  // GSAP Animation
   basicAimation(dir, delay) {
     timeLine.to(".slider", {
       delay,
@@ -140,6 +142,7 @@ class Slider {
     });
   }
 
+  // Button Arrow
   handleClick(type) {
     const dir = type === "next" ? 1 : -1;
     timeLine.to(".slider__img", {
