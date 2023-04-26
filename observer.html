@@ -54,6 +54,7 @@
     }
   </style>
   <body>
+    <!-- Class hidden active if scrolling -->
     <section class="hidden">
       <h1>Observer Method</h1>
       <p>This is My Website</p>
@@ -324,6 +325,7 @@
     <section class="hidden"><h1>Thank You!</h1></section>
 
     <script>
+      // Observer
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           console.log(entry);
@@ -335,6 +337,7 @@
         });
       });
 
+      // Looping Element class hidden
       const hiddenElements = document.querySelectorAll(".hidden");
       hiddenElements.forEach((element) => observer.observe(element));
     </script>
