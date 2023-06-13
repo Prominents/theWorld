@@ -39,5 +39,6 @@ Overall, while a website can be a powerful tool, its impact is ultimately limite
 > Live as you please, because verily you will die. </br>
 > Love whomever you like, because verily you will part ways with them. </br>
 > Do as you please, because verily you will be get Retribution for it.
+> -Archangel Gabriel-
 
 :computer: :floppy_disk: :memo: :dizzy: :zzz:
